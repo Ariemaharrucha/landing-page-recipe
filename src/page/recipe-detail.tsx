@@ -4,9 +4,9 @@ import recipe from "../assets/baked-chicken-wings-asian-style-tomatoes-sauce-pla
 import ads from "../assets/Ads.png";
 import { ingredientsMain, ingredientsSauce, otherRecipes, directions } from "../data/dummy-detail";
 
-export default function Detail() {
+export default function RecipeDetail() {
   return (
-    <Template>
+    <Template recipeSection={true}>
       <section>
         {/* header */}
         <div className="flex items-center justify-between">

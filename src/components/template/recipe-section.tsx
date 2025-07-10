@@ -1,20 +1,13 @@
 import { Heart, Clock, Utensils } from "lucide-react";
 
-export default function MoreRecipes() {
+export default function RecipeSection() {
     return (
-        <section className="py-28">
+        <section className="py-14">
             <div className="container mx-auto pb-8">
-                <div className="flex items-center justify-between">
-                    <h3 className=" text-4xl font-semibold leading-tight">
-                        Try this delicious recipe <br /> to make your day
-                    </h3>
-                    <p className=" text-gray-700 mt-8">Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut <br /> labore et dolore magna aliqut enim ad minim </p>
-                </div>
+                <h3 className=" text-4xl text-center font-semibold leading-tight">
+                    You may like these recipe too
+                </h3>
                 <div className="grid grid-cols-4 items-center gap-6 mt-12">
-                    <CardRecipe />
-                    <CardRecipe />
-                    <CardRecipe />
-                    <CardRecipe />
                     <CardRecipe />
                     <CardRecipe />
                     <CardRecipe />
