@@ -1,7 +1,8 @@
 import Navbar from "../components/share/navbar"
 import Footer from "../components/share/footer"
 import Inbox from "../components/share/inbox"
-export default function Template({ children }: { children: React.ReactNode }) {
+import RecipeSection from "../components/template/recipe-section"
+export default function Template({ children, recipeSection }: { children: React.ReactNode, recipeSection?: boolean }) {
     return (
         <div className="min-h-screen bg-white font-family flex flex-col">
             <Navbar />
@@ -9,6 +10,7 @@ export default function Template({ children }: { children: React.ReactNode }) {
                 {children}
             </section>
             <Inbox />
+            {recipeSection && <RecipeSection />}
             <Footer />
         </div>
     )

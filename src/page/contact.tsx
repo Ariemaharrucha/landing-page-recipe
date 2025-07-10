@@ -6,8 +6,8 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 export default function Contact() {
   return (
-    <Template>
-      <section>
+    <Template recipeSection={true}>
+      <section className="pb-32">
         <h1 className="text-5xl font-semibold leading-tight text-center">
           Contact Us
         </h1>
@@ -26,26 +26,31 @@ export default function Contact() {
               <form action="">
                 <div className="grid grid-cols-2 gap-6">
                   <div>
-                    <Label>Name</Label>
+                    <Label className="text-gray-500 font-semibold">Name</Label>
                     <Input type="text" placeholder="Enter your name"className="mt-4" />
                   </div>
                   <div>
-                    <Label>Email</Label>
+                    <Label className="text-gray-500 font-semibold">Email</Label>
                     <Input type="email" placeholder="Enter your email"className="mt-4" />
                   </div>
                   <div>
-                    <Label>Subject</Label>
+                    <Label className="text-gray-500 font-semibold">Subject</Label>
                     <Input type="text" placeholder="Enter your subject"className="mt-4" />
                   </div>
                   <div>
-                    <Label>Adsvertising</Label>
+                    <Label className="text-gray-500 font-semibold">Adsvertising</Label>
                     <Input type="text" placeholder="Adsvertising"className="mt-4" />
                   </div>
                 </div>
-                <Textarea placeholder="Enter your message" className="mt-4 h-[200px]" />
-                <Button className="mt-4">Send</Button>
+                <div className="mt-6 h-[260px]">
+                  <Label className="text-gray-500 font-semibold">Message</Label>
+                  <Textarea placeholder="Enter your message" className="mt-4 h-full" />
+                </div>
               </form>
             </div>
+          </div>
+          <div className="ml-[430px]">
+            <Button className="mt-6 py-6 px-12">Submit</Button>
           </div>
         </div>
       </section>

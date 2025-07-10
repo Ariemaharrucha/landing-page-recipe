@@ -3,7 +3,7 @@ import chefCooking from "../assets/chef-cooking.png";
 import { Facebook, Twitter, Instagram } from "lucide-react";
 export default function BlogPost() {
   return (
-    <Template>
+    <Template recipeSection={true}>
       <div className="">
         <h1 className="text-6xl font-semibold leading-tight text-center">Full Guide to Becoming a Professional Chef</h1>
         <div className="flex items-center justify-center mt-8">
