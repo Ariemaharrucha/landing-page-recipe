@@ -49,7 +49,7 @@ export default function Contact() {
               </form>
             </div>
           </div>
-          <div className="flex justify-center md:justify-end mt-6">
+          <div className="flex justify-center mt-6">
             <Button className="py-4 md:py-6 px-8 md:px-12 w-full md:w-auto">Submit</Button>
           </div>
         </div>
