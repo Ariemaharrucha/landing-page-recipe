@@ -1,5 +1,7 @@
 
 import { Heart, Clock, Utensils } from "lucide-react";
+import { recipes } from "../../data/dummy-more-recipe";
+import { Link } from "react-router-dom";
 
 export default function MoreRecipes() {
     return (
@@ -12,28 +14,32 @@ export default function MoreRecipes() {
                     <p className="text-gray-700 mt-2 md:mt-8 text-sm md:text-base">Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut <br className="hidden md:block" /> labore et dolore magna aliqut enim ad minim </p>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 items-center gap-4 md:gap-6 mt-8 md:mt-12">
-                    <CardRecipe />
-                    <CardRecipe />
-                    <CardRecipe />
-                    <CardRecipe />
-                    <CardRecipe />
-                    <CardRecipe />
-                    <CardRecipe />
-                    <CardRecipe />
+                    {recipes.map((recipe) => (
+                        <CardRecipe key={recipe.id} title={recipe.title} image={recipe.image} duration={recipe.duration} category={recipe.category} />
+                    ))}
                 </div>
             </div>
         </section>
     );
 }
 
-const CardRecipe = () => {
+
+type CardRecipeProps = {
+    title: string;
+    image: string;
+    duration: string;
+    category: string;
+};
+
+const CardRecipe = ({ title, image, duration, category }: CardRecipeProps) => {
     return (
-      <div className="rounded-2xl px-3 py-4 md:px-4 md:py-6 font-sans">
+      <Link to="/recipe-detail">
+        <div className="rounded-2xl px-3 py-4 md:px-4 md:py-6 font-sans" >
         {/* Container untuk Gambar dan Tombol Hati */}
         <div className="relative">
           <img
-            src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=1998&auto=format&fit=crop"
-            alt="Big and Juicy Wagyu Beef Cheeseburger"
+            src={image}
+            alt={title}
             className="h-36 md:h-56 w-full rounded-xl object-cover"
           />
           {/* Tombol Hati */}
@@ -45,21 +51,22 @@ const CardRecipe = () => {
         {/* Konten Teks */}
         <div className="mt-3 md:mt-4">
           <h2 className="text-base md:text-xl font-semibold text-gray-800">
-            Big and Juicy Wagyu Beef Cheeseburger
+            {title}
           </h2>
 
           {/* Info Tambahan */}
           <div className="mt-3 md:mt-4 flex flex-col sm:flex-row items-start sm:items-center gap-2 md:gap-6 text-gray-700">
             <div className="flex items-center gap-2">
               <Clock size={16} className="md:size-5" />
-              <span className="text-xs md:text-base">30 Minutes</span>
+              <span className="text-xs md:text-base">{duration}</span>
             </div>
             <div className="flex items-center gap-2">
               <Utensils size={16} className="md:size-5" />
-              <span className="text-xs md:text-base">Snack</span>
+              <span className="text-xs md:text-base">{category}</span>
             </div>
           </div>
         </div>
       </div>
+      </Link>
     );
 };
