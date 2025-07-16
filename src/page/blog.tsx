@@ -11,6 +11,7 @@ import {
 } from "@/components/ui/pagination";
 
 import { articles } from "../data/dummy-artikel";
+import { Link } from "react-router-dom";
 
 export default function Blog() {
   return (
@@ -120,6 +121,7 @@ const ArticleCard = ({
   date,
 }: ArticleProps) => {
   return (
+    <Link to={`/blog-post`}>
     <div className="flex flex-col md:flex-row gap-4 mb-6">
       <div className="overflow-hidden rounded-xl md:rounded-2xl w-full md:w-2/4 h-[250px]">
         <img src={image} alt={title} className="w-full h-full object-cover" />
@@ -144,6 +146,7 @@ const ArticleCard = ({
         </div>
       </div>
     </div>
+    </Link>
   );
 }
 

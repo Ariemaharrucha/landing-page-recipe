@@ -37,9 +37,10 @@ const heroesData = [
       avatar: "https://randomuser.me/api/portraits/men/3.jpg",
       date: "10 June 2025",
     },
-    image: "https://images.unsplash.com/photo-1571091718767-18b5b1457add?q=80&w=2072&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1579008004688-667447f16c44?q=80&w=1421&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
 ];
+
 export default function Heroes() {
 	return (
 		<section className="py-2 px-4 md:px-0 min-h-screen">
@@ -97,7 +98,7 @@ export default function Heroes() {
 									</div>
 								</div>
 								{/* Right (Image) */}
-								<div className="bg-black overflow-hidden min-h-[220px] md:min-h-0 flex items-center justify-center h-[200px">
+								<div className="bg-black overflow-hidden min-h-[220px] md:min-h-0 flex items-center justify-center h-[80vh]">
 									<img
 										src={item.image}
 										alt=""
