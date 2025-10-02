@@ -15,11 +15,7 @@ export default function Contact() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
             <div className="col-span-1">
               <div className="overflow-hidden rounded-xl md:rounded-2xl bg-gradient-to-t from-[#e7fafe]">
-                <img
-                  src={chef}
-                  alt="chef"
-                  className="w-full h-full object-cover px-4 md:px-6"
-                />
+                <img src={chef} alt="chef" className="w-full h-full object-cover px-4 md:px-6"/>
               </div>
             </div>
             <div className="col-span-1 md:col-span-2">

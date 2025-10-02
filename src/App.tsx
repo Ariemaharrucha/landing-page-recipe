@@ -4,6 +4,7 @@ import RecipeDetail from './page/recipe-detail';
 import Blog from './page/blog';
 import BlogPost from './page/blog-post';
 import Contact from './page/contact';
+import { NotFound } from './page/not-found';
 function App() {
   return (
     <Router>
@@ -13,6 +14,7 @@ function App() {
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog-post" element={<BlogPost />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
   );
